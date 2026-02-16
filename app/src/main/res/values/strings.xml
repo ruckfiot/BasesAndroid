@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mon App</string>
+    <string name="title_activity_received">ReceivedActivity</string>
 </resources>

@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MonApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".ReceivedActivity"
+            android:exported="false"
+            android:label="@string/title_activity_received"
+            android:theme="@style/Theme.MonApp" />
+        <activity
+            android:name=".SendCountActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MonApp">
