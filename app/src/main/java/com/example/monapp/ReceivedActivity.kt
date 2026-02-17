@@ -26,6 +26,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -34,6 +35,8 @@ import androidx.compose.ui.unit.sp
 import com.example.monapp.components.MyFloatingButton
 import com.example.monapp.components.MyTopAppBar
 import com.example.monapp.ui.theme.MonAppTheme
+import com.example.monapp.ui.theme.Purple40
+import com.example.monapp.ui.theme.Purple80
 
 
 class ReceivedActivity : ComponentActivity() {
@@ -56,7 +59,21 @@ fun ReceivedScreen(countReceived : Int){
         topBar = { MyTopAppBar() },
         floatingActionButton = { MyFloatingButton() }
     ) {innerPadding ->
-        Box(modifier = Modifier.padding(innerPadding)){ }
+        Box(
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+                .background(
+                    brush = Brush.verticalGradient(
+                        colors = listOf(
+                            Color.LightGray,
+                            Purple40
+                        )
+                    )
+                )
+        ) {
+
+        }
     }
 }
 
