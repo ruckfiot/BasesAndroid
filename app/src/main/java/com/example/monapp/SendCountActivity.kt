@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.monapp.etats.Increment
 import com.example.monapp.ui.theme.MonAppTheme
+import com.neac.basesandroid.ReceivedActivity
 import kotlin.jvm.java
 
 class SendCountActivity : ComponentActivity() {

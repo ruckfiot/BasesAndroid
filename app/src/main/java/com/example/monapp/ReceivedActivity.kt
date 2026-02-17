@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -27,6 +28,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.monapp.components.MyTopAppBar
 import com.example.monapp.ui.theme.MonAppTheme
 
 
@@ -47,46 +49,12 @@ class ReceivedActivity : ComponentActivity() {
 @Composable
 fun ReceivedScreen(countReceived : Int){
     Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = "Received Screen",
-                        fontSize = 25.sp,
-                        fontWeight = FontWeight
-                            .ExtraBold)
-                },
-                navigationIcon = {
-                    Icon(
-                        imageVector = Icons.Default.ArrowBack,
-                        contentDescription = null,
-                        modifier = Modifier
-                    )
-                },
-                actions = {
-                    IconButton(
-                        onClick = { /*TODO*/ }
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Notifications,
-                            contentDescription = null,
-                            modifier = Modifier
-                        )
-                    }
-                    IconButton(
-                        onClick = { /*TODO*/ }
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Notifications,
-                            contentDescription = null,
-                            modifier = Modifier
-                        )
-                    }
-                }
-            )
-        }
-    ) { }
+        topBar = { MyTopAppBar() }
+    ) {innerPadding ->
+        Box(modifier = Modifier.padding(innerPadding)){ }
+    }
 }
+
 
 @Preview
 @Composable
