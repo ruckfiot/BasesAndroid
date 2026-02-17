@@ -13,8 +13,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
@@ -28,6 +31,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.monapp.components.MyFloatingButton
 import com.example.monapp.components.MyTopAppBar
 import com.example.monapp.ui.theme.MonAppTheme
 
@@ -49,12 +53,12 @@ class ReceivedActivity : ComponentActivity() {
 @Composable
 fun ReceivedScreen(countReceived : Int){
     Scaffold(
-        topBar = { MyTopAppBar() }
+        topBar = { MyTopAppBar() },
+        floatingActionButton = { MyFloatingButton() }
     ) {innerPadding ->
         Box(modifier = Modifier.padding(innerPadding)){ }
     }
 }
-
 
 @Preview
 @Composable
